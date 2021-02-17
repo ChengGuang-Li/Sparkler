@@ -3,8 +3,13 @@ package com.monash.sparkler.entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Table
+@Entity(name = "User")
+@Table(
+        name = "user",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "user_name_unique", columnNames = "userName")
+        }
+)
 public class User {
     @Id
     @SequenceGenerator(
@@ -19,6 +24,10 @@ public class User {
     )
 
     private Long u_id;
+    @Column(
+            name = "userName",
+            nullable = false
+    )
     private String userName;
     private String password;
     private LocalDate dob;
