@@ -3,7 +3,7 @@ package com.monash.sparkler.entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity(name = "User")
+@Entity(name = "Customer")
 @Table(
         name = "user",
         uniqueConstraints = {
