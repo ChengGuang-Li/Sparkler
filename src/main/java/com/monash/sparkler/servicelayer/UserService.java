@@ -5,7 +5,6 @@ import com.monash.sparkler.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.jws.soap.SOAPBinding;
 import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.List;
