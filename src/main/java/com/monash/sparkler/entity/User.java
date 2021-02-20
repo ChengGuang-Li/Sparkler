@@ -3,9 +3,10 @@ package com.monash.sparkler.entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity(name = "Customer")
+@Entity(name = "User")
 @Table(
-        name = "user",
+        name = "customer"
+        ,
         uniqueConstraints = {
                 @UniqueConstraint(name = "user_name_unique", columnNames = "userName")
         }
@@ -28,6 +29,7 @@ public class User {
             name = "userName",
             nullable = false
     )
+
     private String userName;
     private String password;
     private LocalDate dob;
